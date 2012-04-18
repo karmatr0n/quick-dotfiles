@@ -118,7 +118,7 @@ VIMRC_AFTER_DST=~/.vimrc.after
 VIMRC_AFTER_REMOTE="https://raw.github.com/juarlex/quick-dotfiles/master/dotvimrc.after"
 if [ ! -f "$VIMRC_AFTER_DST" ]
 then
-  curl -L $VIMRC_AFTER_REMOTE -o $VIRM_AFTER_DST
+  curl -L $VIMRC_AFTER_REMOTE -o $VIM_AFTER_DST
 else
   echo "$VIMRC_AFTER_ORIG exists!, I can not overwrite this automatically."
 fi
