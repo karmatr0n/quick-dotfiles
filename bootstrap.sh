@@ -68,7 +68,7 @@ RUBY_VERSION="1.9.3-p125"
 
 if [ ! -d "$RVM_DIR" ]
 then
-  curl -L $RVM_REMOTE | bash -s latest 
+  curl -L $RVM_REMOTE | bash -s stable
 
   rvm_output="$(sed -n '/rvm\/scripts\/rvm/p' $DOT_ZSHRC)"
   if [ ! -z $rvm_output ]
@@ -85,7 +85,9 @@ then
   rvm pkg install autoconf 
   rvm install $RUBY_VERSION 
   rvm use $RUBY_VERSION --default
+  gem install bundler
   gem install rake
+  gem install certified
   gem install tmuxinator
 
   tmuxinator_output="$(sed -n '/\.tmuxinator\/scripts\/tmuxinator/p' $DOT_ZSHRC)"
