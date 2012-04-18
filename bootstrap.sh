@@ -79,8 +79,8 @@ then
   source "$HOME/.rvm/scripts/rvm"
 
   rvm pkg install readline
-  rvm pkg install iconv
-  rvm pkg install zlib 
+  rvm --skip-autoreconf pkg install iconv
+  rvm pkg install zlib
   rvm pkg install openssl
   rvm pkg install autoconf 
   rvm install $RUBY_VERSION 
