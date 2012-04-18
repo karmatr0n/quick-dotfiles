@@ -72,7 +72,7 @@ then
 
   rvm_output="$(sed -n '/rvm\/scripts\/rvm/p' $DOT_ZSHRC)"
   if [ ! -z $rvm_output ]
-  then 
+  then
     echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"' >> $DOT_ZSHRC
   fi
 
@@ -86,6 +86,13 @@ then
   rvm install $RUBY_VERSION 
   rvm use $RUBY_VERSION --default
   gem install rake
+  gem install tmuxinator
+
+  tmuxinator_output="$(sed -n '/\.tmuxinator\/scripts\/tmuxinator/p' $DOT_ZSHRC)"
+  if [ ! -z $tmuxinator_output ]
+  then
+    echo '[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator' >> $DOT_ZSHRC
+  fi
 
 else
   echo "$RVM_DIR exists!, I can not overwrite this automatically."
