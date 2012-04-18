@@ -115,7 +115,7 @@ else
 fi
 
 VIMRC_AFTER_DST=~/.vimrc.after
-VIMRC_AFTER_RESOUCE="https://github.com/juarlex/quick_dotfiles/raw/master/dotvimrc.after"
+VIMRC_AFTER_REMOTE="https://raw.github.com/juarlex/quick-dotfiles/master/dotvimrc.after"
 if [ ! -f "$VIMRC_AFTER_DST" ]
 then
   curl -L $VIMRC_AFTER_REMOTE -o $VIRM_AFTER_DST
