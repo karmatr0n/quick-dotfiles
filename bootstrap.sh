@@ -78,7 +78,7 @@ then
 
   source "$HOME/.rvm/scripts/rvm"
 
-  rvm pkg install readline
+  rvm --skip-autoreconf pkg install readline
   rvm --skip-autoreconf pkg install iconv
   rvm pkg install zlib
   rvm pkg install openssl
