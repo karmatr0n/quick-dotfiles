@@ -102,10 +102,7 @@ fi
 
 # Vim settings
 VIM_DIR=~/.vim
-VIMRC_BEFORE=~/.vimrc.before
-VIMRC_AFTER=~/.vimrc.after
 VIM_REMOTE="http://bit.ly/janus-bootstrap"
-
 if [ ! -d "$VIM_DIR" ]
 then
    curl -Lo- $VIM_REMOTE | bash
@@ -115,7 +112,6 @@ fi
 
 VUNDLE_DIR=~/.vim/bundle/vundle
 VUNDLE_REMOTE="https://github.com/gmarik/vundle.git"
-
 if [ ! -d "$VUNDLE_DIR" ]
 then
    git clone $VUNDLE_REMOTE $VUNDLE_DIR
@@ -130,13 +126,4 @@ then
   curl -L $VIMRC_AFTER_REMOTE -o $VIMRC_AFTER_DST
 else
   echo "$VIMRC_AFTER_ORIG exists!, I can not overwrite this automatically."
-fi
-
-JANUS_DIR=~/.vim/janus
-JANUS_REMOTE="http://bit.ly/janus-bootstrap"
-if [ ! -d "$JANUS_DIR" ]
-then
-   curl -Lo - $JANUS_REMOTE | bash
-else
-  echo "$JANUS_DIR exists!, I can not overwrite this automatically."
 fi
