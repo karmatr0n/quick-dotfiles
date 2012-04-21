@@ -130,6 +130,6 @@ fi
 
 # HUB Settings
 HUB_CMD=~/local/bin/hub
-HUB_REMOTE=http://defunkt.io/hub/standalone
+HUB_REMOTE="http://defunkt.io/hub/standalone"
 curl $HUB_REMOTE -sLo $HUB_CMD
 chmod +x $HUB_CMD
