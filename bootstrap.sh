@@ -64,7 +64,7 @@ fi
 # Section to install rvm
 RVM_DIR=~/.rvm
 RVM_REMOTE="get.rvm.io"
-RUBY_VERSION="1.9.3-p125"
+RUBY_VERSION="1.9.3-p194"
 
 if [ ! -d "$RVM_DIR" ]
 then
