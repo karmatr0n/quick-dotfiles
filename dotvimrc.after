@@ -30,10 +30,10 @@ Bundle 'tlib'
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'nelstrom/vim-mac-classic-theme.git'
 Bundle 'rickharris/vim-railscasts.git'
-syntax enable
-set background=dark
+Bundle 'nathasm/snipmate-snippets-rubymotion.git'
 set t_Co=256
-colorscheme railscasts
+syntax on
+colorscheme solarized
 
 " Default font
 set guifont=Monaco:h18.00
@@ -55,3 +55,27 @@ filetype plugin indent on     " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed.
+set invlist
+
+map   <silent> <F5> mmgg=G'm
+imap  <silent> <F5> <Esc> mmgg=G'm
+
+" Map ctrl-movement keys to window switching
+map <C-k> <C-w><Up>
+map <C-j> <C-w><Down>
+map <C-l> <C-w><Right>
+map <C-h> <C-w><Left>
+
+" Switch to alternate file
+map <C-Tab> :bnext<cr>
+map <C-S-Tab> :bprevious<cr>
+
+call pathogen#infect()
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags() " generate helptags for everything in 'runtimepath''"
+syntax on
+filetype plugin indent on
+
+let g:solarized_termcolors=256
+set background=dark
+
