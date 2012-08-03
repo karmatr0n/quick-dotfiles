@@ -125,7 +125,16 @@ if [ ! -f "$VIMRC_AFTER_DST" ]
 then
   curl -L $VIMRC_AFTER_REMOTE -o $VIMRC_AFTER_DST
 else
-  echo "$VIMRC_AFTER_ORIG exists!, I can not overwrite this automatically."
+  echo "$VIMRC_AFTER_DST exists!, I can not overwrite this automatically."
+fi
+
+GITCONFIG_DST=~/.gitconfig
+GITCOFIG_REMOTE="https://raw.github.com/juarlex/quick-dotfiles/master/dotgitconfig"
+if [ ! -f "$GITCONFIG_DST" ]
+then
+  curl -L $GITCONFIG_REMOTE -o $GITCONFIG_DST
+else
+  echo "$GITCONFIG_DST exists!, I can not overwrite this automatically."
 fi
 
 # HUB Settings

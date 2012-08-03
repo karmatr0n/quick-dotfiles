@@ -1,0 +1,12 @@
+[user]
+	name = Alejandro Juarez Robles
+	email = juarlex@gmail.com
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[core]
+	editor = mvim
+[merge]
+	tool = opendiff
