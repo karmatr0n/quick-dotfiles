@@ -31,6 +31,7 @@ Bundle 'nathasm/snipmate-snippets-rubymotion.git'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'nelstrom/vim-markdown-preview.git'
 set t_Co=256
 syntax on
 colorscheme solarized
@@ -71,6 +72,7 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 call pathogen#infect()
 call pathogen#infect('ruby')
 call pathogen#infect('rubymotion')
+call pathogen#infect('vmp')
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags() " generate helptags for everything in 'runtimepath''"
 syntax on
@@ -251,6 +253,9 @@ nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
+
+" Preview markdown document
+map <leader>p :Mm<CR>
 
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
