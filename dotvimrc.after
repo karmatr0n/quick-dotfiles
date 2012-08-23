@@ -144,6 +144,7 @@ let g:gist_open_browser_after_post = 1
 set nocompatible
 
 so ~/.vim/local/ninja.vim
+so ~/.vim/plugin/clang_complete.vim
 
 set number
 set ruler
