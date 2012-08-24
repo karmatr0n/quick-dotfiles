@@ -32,6 +32,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'nelstrom/vim-markdown-preview.git'
+Bundle 'kelan/gyp.vim.git'
 set t_Co=256
 syntax on
 colorscheme solarized
